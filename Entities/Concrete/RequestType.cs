@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class Driver:IEntity
+    public class RequestType:IEntity
     {
-        public int DriverId { get; set; }
-        public string DriverName { get; set; }
-        public string PhoneNumber { get; set; }
+        public int Id { get; set; }
+        public string RequestTypeName { get; set; }
     }
 }

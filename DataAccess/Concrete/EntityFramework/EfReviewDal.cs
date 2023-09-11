@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,31 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfReviewDal : IReviewDal
+    public class EfReviewDal : EfEntitiyRepositoryBase<Review,TransportationContext>,IReviewDal
     {
-        public void Add(Review entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(Review entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Review Get(Expression<Func<Review, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Review> GetAll(Expression<Func<Review, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Review entity)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

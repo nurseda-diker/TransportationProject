@@ -25,6 +25,8 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<TransportRequest> TransportRequests;
         public DbSet<User> Users;
         public DbSet<Vehicle> Vehicles;
+        public DbSet<RequestType> RequestTypes;
+
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,31 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfTransportRequestDal : ITransportRequestDal
+    public class EfTransportRequestDal : EfEntitiyRepositoryBase<TransportRequest,TransportationContext>,ITransportRequestDal
     {
-        public void Add(TransportRequest entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(TransportRequest entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public TransportRequest Get(Expression<Func<TransportRequest, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<TransportRequest> GetAll(Expression<Func<TransportRequest, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(TransportRequest entity)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

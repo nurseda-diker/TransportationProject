@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,31 +10,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfDriverDal : IDriverDal
+    public class EfDriverDal : EfEntitiyRepositoryBase<Driver,TransportationContext>,IDriverDal
     {
-        public void Add(Driver entity)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public void Delete(Driver entity)
-        {
-            throw new NotImplementedException();
-        }
+        
 
-        public Driver Get(Expression<Func<Driver, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Driver> GetAll(Expression<Func<Driver, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Driver entity)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
