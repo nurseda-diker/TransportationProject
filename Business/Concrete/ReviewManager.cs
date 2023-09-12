@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -17,9 +19,15 @@ namespace Business.Concrete
             _reviewDal = reviewDal;
         }
 
-        public List<Review> GetAll()
+        public IResult Add(Review review)
         {
-            return _reviewDal.GetAll();
+            _reviewDal.Add(review);
+            return new SuccessResult(Messages.ReviewAdded);
+        }
+
+        public IDataResult<List<Review>> GetAll()
+        {
+            return new SuccessDataResult<List<Review>>(_reviewDal.GetAll(),Messages.ReviewsListed);
         }
     }
 }

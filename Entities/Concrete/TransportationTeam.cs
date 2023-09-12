@@ -11,8 +11,8 @@ namespace Entities.Concrete
     {
         public int TransportationTeamId { get; set; }
         public string TeamName { get; set; }
-        public List<string> TeamMembers { get; set; }
-        public string TeamLeader { get; set; }
+        public string MemberName { get; set; }
+       // public string TeamLeader { get; set; }
         public string ContactEmail { get; set; } 
         public string ContactPhone { get; set; } 
     }

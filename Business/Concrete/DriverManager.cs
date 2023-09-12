@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -18,9 +20,15 @@ namespace Business.Concrete
             _driverDal = driverDal;
         }
 
-        public List<Driver> GetAll()
+        public IResult Add(Driver driver)
         {
-            return _driverDal.GetAll();
+            _driverDal.Add(driver);
+            return new SuccessResult(Messages.DriverAdded);
+        }
+
+        public IDataResult<List<Driver>> GetAll()
+        {
+            return new SuccessDataResult<List<Driver>>(_driverDal.GetAll(), Messages.DriversListed);
         }
     }
 }

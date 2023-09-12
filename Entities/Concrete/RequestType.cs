@@ -11,5 +11,6 @@ namespace Entities.Concrete
     {
         public int Id { get; set; }
         public string RequestTypeName { get; set; }
+        public decimal  RequestTypePrice { get; set; }
     }
 }

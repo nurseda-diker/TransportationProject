@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -16,9 +18,16 @@ namespace Business.Concrete
         {
             _vehicleDal = vehicleDal;
         }
-        public List<Vehicle> GetAll()
+
+        public IResult Add(Vehicle vehicle)
         {
-            return _vehicleDal.GetAll();
+            _vehicleDal.Add(vehicle);
+            return new SuccessResult(Messages.VehicleAdded);
+        }
+
+        public IDataResult<List<Vehicle>> GetAll()
+        {
+            return new SuccessDataResult<List<Vehicle>>(_vehicleDal.GetAll(), Messages.VehiclesListed);
         }
     }
 }

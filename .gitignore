@@ -79,6 +79,7 @@ publish/
 packages/
 bin/
 obj/
+Properties/
 ## TODO: If the tool you use requires repositories.config, also uncomment the next line
 !packages/repositories.config
 

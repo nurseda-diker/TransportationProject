@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -17,9 +19,15 @@ namespace Business.Concrete
            _reservationDal = reservationDal;
         }
 
-        public List<Reservation> GetAll()
+        public IResult Add(Reservation reservation)
         {
-            return _reservationDal.GetAll();
+            _reservationDal.Add(reservation);
+            return new SuccessResult(Messages.ReservationAdded);
+        }
+
+        public IDataResult<List<Reservation>> GetAll()
+        {
+            return new SuccessDataResult<List<Reservation>>(_reservationDal.GetAll(), Messages.ReservationsListed);
         }
     }
 }

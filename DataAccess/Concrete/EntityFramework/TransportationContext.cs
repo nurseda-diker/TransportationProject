@@ -16,16 +16,17 @@ namespace DataAccess.Concrete.EntityFramework
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLOCALDB;Database=Transportation;Trusted_Connection=true");
         }
 
-        public DbSet<Company> Companies;
-        public DbSet<Driver>  Drivers;
-        public DbSet<Message> Messages;
-        public DbSet<Reservation> Reservations;
-        public DbSet<Review> Reviews;
-        public DbSet<TransportationTeam> TransportationTeams;
-        public DbSet<TransportRequest> TransportRequests;
-        public DbSet<User> Users;
-        public DbSet<Vehicle> Vehicles;
-        public DbSet<RequestType> RequestTypes;
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Driver>  Drivers { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<TransportationTeam> TransportationTeams { get; set; }
+        public DbSet<TransportRequest> TransportRequests { get; set; }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<RequestType> RequestTypes { get; set; }
 
 
     }

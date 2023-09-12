@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace Business.Abstract
 {
     public interface ITransportRequestService
     {
-        List<TransportRequest> GetAll();
-        List<TransportRequest> GetByRequestPrice(decimal min,decimal max);
+        IDataResult<List<TransportRequest>> GetAll();
+        IResult Add(TransportRequest transportRequest);
+        //IDataResult<List<TransportRequest>> GetByRequestPrice(decimal min,decimal max);
     }
 }

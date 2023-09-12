@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -17,9 +19,16 @@ namespace Business.Concrete
         {
             _messageDal = messageDal;
         }
-        public List<Message> GetAll()
+
+        public IResult Add(Message message)
         {
-            return _messageDal.GetAll();
+            _messageDal.Add(message);
+            return new SuccessResult(Messages.MessageAdded);
+        }
+
+        public IDataResult<List<Message>> GetAll()
+        {
+            return new SuccessDataResult<List<Message>>(_messageDal.GetAll(), Messages.MessagesListed);
         }
     }
 }

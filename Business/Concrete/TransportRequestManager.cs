@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -17,14 +19,26 @@ namespace Business.Concrete
         {
             _transportRequestDal = transportRequestDal;
         }
-        public List<TransportRequest> GetAll()
+
+        public IResult Add(TransportRequest transportRequest)
         {
-            return _transportRequestDal.GetAll();
+            _transportRequestDal.Add(transportRequest);
+            return new SuccessResult(Messages.TransportRequestAdded);
         }
 
-        public List<TransportRequest> GetByRequestPrice(decimal min, decimal max)
+        public IDataResult<List<TransportRequest>> GetAll()
         {
-            return _transportRequestDal.GetAll(t => t.RequestPrice <= min && t.RequestPrice <= max);
+            return new SuccessDataResult<List<TransportRequest>>(_transportRequestDal.GetAll(),Messages.TransportRequestsListed);
         }
+
+        //public List<TransportRequest> GetByRequestPrice(decimal min, decimal max)
+        //{
+        //    return _transportRequestDal.GetAll(t => t.RequestPrice <= min && t.RequestPrice <= max);
+        //}
+
+        //IDataResult<List<TransportRequest>> ITransportRequestService.GetByRequestPrice(decimal min, decimal max)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace Business.Abstract
 {
     public interface IReviewService
     {
-        List<Review> GetAll();
+        IDataResult<List<Review>> GetAll();
+        IResult Add(Review review);
     }
 }

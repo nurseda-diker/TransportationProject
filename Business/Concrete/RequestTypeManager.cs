@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -17,9 +19,15 @@ namespace Business.Concrete
             _requestTypeDal = requestTypeDal;
         }
 
-        public List<RequestType> GetAll()
+        public IResult Add(RequestType requestType)
         {
-            return _requestTypeDal.GetAll();
+            _requestTypeDal.Add(requestType);
+            return new SuccessResult(Messages.RequestTypeAdded);
+        }
+
+        public IDataResult<List<RequestType>> GetAll()
+        {
+            return new SuccessDataResult<List<RequestType>>(_requestTypeDal.GetAll(), Messages.RequestTypesListed);
         }
 
         public RequestType GetById(int requestTypeid)
