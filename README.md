@@ -1,5 +1,5 @@
 ## Nakliyat Uygulaması
-### Bu proje, dünyanın her yerinden taşıma ihtiyacı olanlarla taşıma işlemlerini gerçekleştirenleri bir araya getirmeyi amaçlayan bir nakliyat uygulamasıdır.Projede ASP.NET Core Web API, C#, Entity Framework Core, MSSQL ve diğer teknolojileri kullanılmıştır.
+### Bu proje, dünyanın her yerinden taşıma ihtiyacı olanlarla taşıma işlemlerini gerçekleştirenleri bir araya getirmeyi amaçlayan bir nakliyat uygulamasıdır.Projede ASP.NET Core Web API, C#, Entity Framework Core, MSSQL ve diğer teknolojiler kullanılmıştır.
 
 ## Dizin Yapısı
 ```
