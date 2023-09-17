@@ -11,6 +11,7 @@ namespace Entities.Concrete
     {
         public int VehicleId { get; set; }
         public int DriverId { get; set; }
+        public int CompanyId { get; set; }
         public string VehicleBrand { get; set; }
         public string VehicleType { get; set; }
         public string VehicleCapacity { get; set; }

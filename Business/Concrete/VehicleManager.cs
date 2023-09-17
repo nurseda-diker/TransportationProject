@@ -29,5 +29,10 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Vehicle>>(_vehicleDal.GetAll(), Messages.VehiclesListed);
         }
+
+        public IDataResult<List<Vehicle>> GetByCompanyId(int companyId)
+        {
+            return new SuccessDataResult<List<Vehicle>>(_vehicleDal.GetAll(v => v.CompanyId == companyId));
+        }
     }
 }

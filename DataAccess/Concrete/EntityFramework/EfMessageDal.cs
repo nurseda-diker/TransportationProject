@@ -1,4 +1,5 @@
 ﻿using Core.DataAccess.EntityFramework;
+using Core.Entities.Concrete;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -10,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfMessageDal : EfEntitiyRepositoryBase<Message, TransportationContext>,IMessageDal
+    public class EfMessageDal : EfEntitiyRepositoryBase<Message, TransportationContext>, IMessageDal
     {
-        
+       
     }
 }

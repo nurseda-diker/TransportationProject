@@ -12,5 +12,7 @@ namespace Business.Abstract
     {
         IDataResult<List<TransportationTeam>> GetAll();
         IResult Add(TransportationTeam transportationTeam);
+
+        IDataResult<List<TransportationTeam>> GetTeamByCompanyId(int companyId);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,10 @@ namespace Business.Abstract
     {
         IDataResult<List<Company>> GetAll();
         IResult Add(Company company);
+
+        IDataResult<List<CompanyDetailDto>> GetCompanyDetails();
+
+        IDataResult<List<CompanyDetailDto>> GetById(int companyId);
+        IDataResult<List<CompanyDetailDto>> GetCompanyDetailsByRequestId(int requestId);
     }
 }

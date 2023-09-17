@@ -1,5 +1,6 @@
 ﻿using Core.DataAccess;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace DataAccess.Abstract
 {
     public interface ICompanyDal : IEntityRepository<Company>
     {
-        
+        List<CompanyDetailDto> GetCompanyDetails();
+        List<CompanyDetailDto> GetCompanyDetailsByRequestId(int requestId);
+        List<CompanyDetailDto> GetCompanyDetailsByCompanyId(int companyId);
     }
 }

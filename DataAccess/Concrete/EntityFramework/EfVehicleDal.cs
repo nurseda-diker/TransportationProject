@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfVehicleDal : EfEntitiyRepositoryBase<Vehicle, TransportationContext>,IVehicleDal
+    public class EfVehicleDal : EfEntitiyRepositoryBase<Vehicle, TransportationContext>, IVehicleDal
     {
-       
+        
     }
 }

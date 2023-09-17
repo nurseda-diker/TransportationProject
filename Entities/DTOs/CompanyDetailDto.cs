@@ -5,17 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Concrete
+namespace Entities.DTOs
 {
-    public class Company:IEntity
+    public class CompanyDetailDto:IDto
     {
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
-        public int RequestTypeId { get; set; }
-        public int ReviewId { get; set; }
-        public int VehicleId { get; set; }
+        public string RequestType { get; set; }
+        public int Rating { get; set; }
+        //public string CompanyImage { get; set; }
+        public string VehicleType { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
+
     }
 }

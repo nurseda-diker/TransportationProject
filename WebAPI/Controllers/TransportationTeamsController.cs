@@ -37,5 +37,17 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+
+        [HttpGet("getteambycompanyid")]
+        public IActionResult GetTeamByCompanyId(int companyId)
+        {
+            var result = _transportationTeamService.GetTeamByCompanyId(companyId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

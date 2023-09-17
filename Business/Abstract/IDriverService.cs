@@ -12,5 +12,8 @@ namespace Business.Abstract
     {
         IDataResult<List<Driver>> GetAll();
         IResult Add(Driver driver);
+
+        IDataResult<List<Driver>> GetDriversByVehicleId(int vehicleId);
+
     }
 }

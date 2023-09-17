@@ -10,6 +10,7 @@ namespace Entities.Concrete
     public class Driver:IEntity
     {
         public int DriverId { get; set; }
+        public int VehicleId { get; set; }
         public string DriverName { get; set; }
         public string PhoneNumber { get; set; }
     }

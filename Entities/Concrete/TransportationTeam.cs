@@ -10,6 +10,7 @@ namespace Entities.Concrete
     public class TransportationTeam:IEntity
     {
         public int TransportationTeamId { get; set; }
+        public int CompanyId { get; set; }
         public string TeamName { get; set; }
         public string MemberName { get; set; }
        // public string TeamLeader { get; set; }

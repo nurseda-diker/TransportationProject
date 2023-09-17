@@ -32,7 +32,7 @@ namespace Business.Concrete
 
         public RequestType GetById(int requestTypeid)
         {
-            return _requestTypeDal.Get(t => t.Id == requestTypeid);
+            return _requestTypeDal.Get(t => t.RequestTypeId == requestTypeid);
         }
     }
 }

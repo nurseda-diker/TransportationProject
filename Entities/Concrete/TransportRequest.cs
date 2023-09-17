@@ -12,7 +12,6 @@ namespace Entities.Concrete
         public int TransportRequestId { get; set; }
         public int UserId { get; set; }
         public int RequestTypeId { get; set; }
-        public decimal RequestPrice { get; set; }
         public string SourceAddress { get; set; }
         public string DestinationAddress { get; set; }
         public DateTime RequestDate { get; set; }

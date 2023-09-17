@@ -30,5 +30,10 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Driver>>(_driverDal.GetAll(), Messages.DriversListed);
         }
+
+        public IDataResult<List<Driver>> GetDriversByVehicleId(int vehicleId)
+        {
+            return new SuccessDataResult<List<Driver>>(_driverDal.GetAll(d => d.VehicleId == vehicleId));
+        }
     }
 }

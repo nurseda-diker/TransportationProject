@@ -29,5 +29,10 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<TransportationTeam>>(_transportationTeamDal.GetAll(), Messages.TransportationTeamsListed);
         }
+
+        public IDataResult<List<TransportationTeam>> GetTeamByCompanyId(int companyId)
+        {
+            return new SuccessDataResult<List<TransportationTeam>>(_transportationTeamDal.GetAll(t => t.CompanyId == companyId));
+        }
     }
 }

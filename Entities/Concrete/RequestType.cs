@@ -9,7 +9,7 @@ namespace Entities.Concrete
 {
     public class RequestType:IEntity
     {
-        public int Id { get; set; }
+        public int RequestTypeId { get; set; }
         public string RequestTypeName { get; set; }
         public decimal  RequestTypePrice { get; set; }
     }

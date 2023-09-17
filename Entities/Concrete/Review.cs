@@ -12,6 +12,7 @@ namespace Entities.Concrete
         public int ReviewId { get; set; }
         public int UserId { get; set; }
         public int ReservationId { get; set; }
+        public int CompanyId { get; set; }
         public string Commit { get; set; }
         public int Rating { get; set; }
     }
